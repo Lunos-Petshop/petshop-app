@@ -25,7 +25,7 @@ export default function Button({
     variant === 'primary' && styles.primaryButton,
     variant === 'secondary' && styles.secondaryButton,
     variant === 'outline' && styles.outlineButton,
-    disabled && styles.disabledButton,
+    disabled && (variant === 'outline' ? styles.disabledOutlineButton : styles.disabledButton),
     style,
   ];
 
@@ -38,6 +38,14 @@ export default function Button({
     textStyle,
   ];
 
+  const iconStyles = [
+    styles.icon,
+    variant === 'primary' && styles.primaryText,
+    variant === 'secondary' && styles.secondaryText,
+    variant === 'outline' && styles.outlineText,
+    disabled && styles.disabledText,
+  ];
+
   return (
     <TouchableOpacity
       style={buttonStyle}
@@ -45,7 +53,7 @@ export default function Button({
       disabled={disabled}
       activeOpacity={0.7}
     >
-      {icon && <Text style={[styles.icon, textStyles]}>{icon}</Text>}
+      {icon && <Text style={iconStyles}>{icon}</Text>}
       <Text style={textStyles}>{title}</Text>
     </TouchableOpacity>
   );
@@ -75,6 +83,9 @@ const styles = StyleSheet.create({
   disabledButton: {
     backgroundColor: '#CCCCCC',
     opacity: 0.6,
+  },
+  disabledOutlineButton: {
+    opacity: 0.4,
   },
   text: {
     fontSize: 18,
