@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet } from "react-native";
-import SearchBar from "../../components/SearchBar";
-import FilterButton from "../../components/FilterButton";
+import { SearchBar, FilterButton } from "../../components";
 
 export default function Animals() {
     const [searchQuery, setSearchQuery] = useState("");
