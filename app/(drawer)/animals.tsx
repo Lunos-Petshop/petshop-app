@@ -4,6 +4,7 @@ import { PetCard } from "@/components";
 export default function Animals() {
     return (
         <View style={styles.container}>
+            {/* Demo usage - Replace icon.png with actual pet images in production */}
             <PetCard 
                 name="Buddy"
                 breed="Golden Retriever"

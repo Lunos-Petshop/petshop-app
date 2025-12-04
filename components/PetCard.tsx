@@ -78,7 +78,6 @@ const styles = StyleSheet.create({
   ownerSection: {
     padding: 20,
     paddingTop: 16,
-    paddingBottom: 20,
   },
   ownerLabel: {
     fontSize: 14,
