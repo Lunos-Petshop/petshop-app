@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "petshop-app",
-    "slug": "petshop-app",
+    "name": "lunos-app",
+    "slug": "lunos-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
