@@ -96,12 +96,6 @@ export default function DrawerLayout() {
           ),
         }}
       />
-      <Drawer.Screen
-        name="animals"
-        options={{
-          drawerItemStyle: { display: 'none' },
-        }}
-      />
     </Drawer>
   );
 }
