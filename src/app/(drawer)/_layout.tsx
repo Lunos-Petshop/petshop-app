@@ -1,9 +1,9 @@
-import { Drawer } from 'expo-router/drawer';
-import { View, StyleSheet, ScrollView } from 'react-native';
-import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
 import { Ionicons } from '@expo/vector-icons';
-import LunosLogo from '@/components/LunosLogo';
-import AccountInfo from '@/components/AccountInfo';
+import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
+import { Drawer } from 'expo-router/drawer';
+import { StyleSheet, View } from 'react-native';
+import AccountInfo from "../../components/accountInfo/AccountInfo";
+import LunosLogo from "../../components/lunosLogo/LunosLogo";
 
 function CustomDrawerContent(props: any) {
   return (
@@ -29,7 +29,7 @@ export default function DrawerLayout() {
       drawerContent={(props) => <CustomDrawerContent {...props} />}
       screenOptions={{
         headerShown: true,
-        drawerActiveTintColor: '#6366f1',
+        drawerActiveTintColor: '#da7430ff',
         drawerInactiveTintColor: '#6b7280',
         drawerStyle: {
           backgroundColor: '#ffffff',

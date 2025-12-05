@@ -1,6 +1,7 @@
-import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { styles } from '@/components/lunosLogo/styles';
 import { Ionicons } from '@expo/vector-icons';
+import React from 'react';
+import { Text, View } from 'react-native';
 
 interface LogoProps {
   size?: 'small' | 'medium' | 'large';
@@ -14,7 +15,7 @@ export default function LunosLogo({ size = 'medium', showText = true }: LogoProp
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
-        <Ionicons name="paw" size={iconSize} color="#6366f1" />
+        <Ionicons name="paw" size={iconSize} color="#da7430ff" />
       </View>
       {showText && (
         <Text style={[styles.text, { fontSize }]}>Lunos Petshop</Text>
@@ -23,18 +24,3 @@ export default function LunosLogo({ size = 'medium', showText = true }: LogoProp
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 10,
-  },
-  logoContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    fontWeight: 'bold',
-    color: '#1f2937',
-  },
-});
