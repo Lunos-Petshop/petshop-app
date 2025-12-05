@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet, ImageSourcePropType } from 'react-native';
+import { Image, ImageSourcePropType, StyleSheet, Text, View } from 'react-native';
 
 export interface PetCardProps {
   name: string;
@@ -8,7 +8,7 @@ export interface PetCardProps {
   imageSource: ImageSourcePropType;
 }
 
-export default function PetCard({ name, breed, ownerName, imageSource }: PetCardProps) {
+export function PetCard({ name, breed, ownerName, imageSource }: PetCardProps) {
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>

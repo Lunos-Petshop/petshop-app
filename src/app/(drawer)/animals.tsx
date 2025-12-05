@@ -1,5 +1,5 @@
-import { View, StyleSheet } from "react-native";
-import { PetCard } from "@/components";
+import { PetCard } from "@/components/petcard";
+import { StyleSheet, View } from "react-native";
 
 export default function Animals() {
     return (
@@ -9,7 +9,7 @@ export default function Animals() {
                 name="Buddy"
                 breed="Golden Retriever"
                 ownerName="Sophia Clark"
-                imageSource={require("@/assets/images/icon.png")}
+                imageSource={require("../../../assets/images/icon.png")}
             />
         </View>
     );
