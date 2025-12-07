@@ -4,6 +4,7 @@ import { Drawer } from 'expo-router/drawer';
 import { StyleSheet, View } from 'react-native';
 import AccountInfo from "../../components/accountInfo/AccountInfo";
 import LunosLogo from "../../components/lunosLogo/LunosLogo";
+import { globalStyles } from "../../globalStyles";
 
 function CustomDrawerContent(props: any) {
   return (
@@ -29,10 +30,10 @@ export default function DrawerLayout() {
       drawerContent={(props) => <CustomDrawerContent {...props} />}
       screenOptions={{
         headerShown: true,
-        drawerActiveTintColor: '#da7430ff',
-        drawerInactiveTintColor: '#6b7280',
+        drawerActiveTintColor: globalStyles.brown3,
+        drawerInactiveTintColor: globalStyles.gray5,
         drawerStyle: {
-          backgroundColor: '#ffffff',
+          backgroundColor: globalStyles.gray1,
         },
       }}
     >
@@ -107,11 +108,10 @@ const styles = StyleSheet.create({
   logoContainer: {
     padding: 20,
     paddingTop: 40,
-    backgroundColor: '#ffffff',
+    backgroundColor: globalStyles.gray1,
     alignItems: 'center',
-    borderBottomWidth: 1,
-    borderBottomColor: '#e5e7eb',
   },
+  
   menuContainer: {
     flex: 1,
     paddingTop: 10,

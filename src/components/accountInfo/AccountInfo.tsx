@@ -1,4 +1,5 @@
 import { styles } from "@/components/accountInfo/styles";
+import { globalStyles } from "@/globalStyles";
 import { Ionicons } from '@expo/vector-icons';
 import React from 'react';
 import { Text, View } from 'react-native';
@@ -17,7 +18,7 @@ export default function AccountInfo({
   return (
     <View style={styles.container}>
       <View style={styles.avatarContainer}>
-        <Ionicons name="person-circle" size={60} color="#6b7280" />
+        <Ionicons name="person-circle" size={60} color={globalStyles.gray5} />
       </View>
       <View style={styles.infoContainer}>
         <Text style={styles.name}>{name}</Text>

@@ -1,3 +1,4 @@
+import { globalStyles } from '@/globalStyles';
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
@@ -12,6 +13,6 @@ export const styles = StyleSheet.create({
   },
   text: {
     fontWeight: 'bold',
-    color: '#1f2937',
+    color: globalStyles.gray10,
   },
 });

@@ -1,7 +1,9 @@
+import { globalStyles } from '@/globalStyles';
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   button: {
+    maxWidth: 360,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
@@ -11,18 +13,18 @@ export const styles = StyleSheet.create({
     minWidth: 120,
   },
   primaryButton: {
-    backgroundColor: '#FFD4A3',
+    backgroundColor: globalStyles.brown1,
   },
   secondaryButton: {
-    backgroundColor: '#E0E0E0',
+    backgroundColor: globalStyles.gray3,
   },
   outlineButton: {
     backgroundColor: 'transparent',
     borderWidth: 2,
-    borderColor: '#FFD4A3',
+    borderColor: globalStyles.brown1,
   },
   disabledButton: {
-    backgroundColor: '#CCCCCC',
+    backgroundColor: globalStyles.gray4,
     opacity: 0.6,
   },
   disabledOutlineButton: {
@@ -33,16 +35,16 @@ export const styles = StyleSheet.create({
     fontWeight: '600',
   },
   primaryText: {
-    color: '#000000',
+    color: globalStyles.gray10,
   },
   secondaryText: {
-    color: '#000000',
+    color: globalStyles.gray10,
   },
   outlineText: {
-    color: '#FFD4A3',
+    color: globalStyles.brown1,
   },
   disabledText: {
-    color: '#666666',
+    color: globalStyles.gray7,
   },
   icon: {
     marginRight: 8,
