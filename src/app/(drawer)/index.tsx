@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
+import { globalStyles } from "../../globalStyles";
 
 export default function Page() {
   return (
@@ -29,6 +30,6 @@ const styles = StyleSheet.create({
   },
   subtitle: {
     fontSize: 36,
-    color: "#38434D",
+    color: globalStyles.gray10,
   },
 });

@@ -1,10 +1,11 @@
+import { globalStyles } from '@/globalStyles';
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#F5F5F5',
+    backgroundColor: globalStyles.gray1,
     borderRadius: 8,
     paddingHorizontal: 16,
     paddingVertical: 10,
@@ -12,7 +13,7 @@ export const styles = StyleSheet.create({
   },
   text: {
     fontSize: 14,
-    color: '#333',
+    color: globalStyles.gray10,
     fontWeight: '500',
   },
 });

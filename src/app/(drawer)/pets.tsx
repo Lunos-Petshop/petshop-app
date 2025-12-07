@@ -1,4 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
+import { globalStyles } from "../../globalStyles";
 
 export default function Pets() {
   return (
@@ -13,7 +14,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: globalStyles.gray1,
   },
   title: {
     fontSize: 24,
