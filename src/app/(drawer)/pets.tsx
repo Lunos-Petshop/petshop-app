@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from "react-native";
-import { EntityListTable } from "../../components/entityListTable";
+import { EntityListTable, TableRow } from "../../components/entityListTable";
 import { globalStyles } from "../../globalStyles";
 
 export default function Pets() {
@@ -25,12 +25,12 @@ export default function Pets() {
     { id: 12, name: 'Yorkshire Terrier', size: 'Pequeno', species: 'Cachorro', furType: 'Longo' },
   ];
 
-  const handleEdit = (row: any) => {
+  const handleEdit = (row: TableRow) => {
     console.log('Edit:', row);
     // TODO: Navigate to edit screen or open modal
   };
 
-  const handleDelete = (row: any) => {
+  const handleDelete = (row: TableRow) => {
     console.log('Delete:', row);
     // TODO: Show confirmation dialog and delete
   };
