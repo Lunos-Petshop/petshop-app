@@ -60,7 +60,7 @@ export const styles = StyleSheet.create({
     backgroundColor: globalStyles.gray1,
   },
   oddRow: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: globalStyles.white,
   },
 
   // Table Cells

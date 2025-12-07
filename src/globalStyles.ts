@@ -1,4 +1,5 @@
 export const globalStyles = {
+    white: "#FFFFFF",
     gray1: "#F5F7FA",
     gray2: "#E4E7EB",
     gray3: "#CBD2D9",

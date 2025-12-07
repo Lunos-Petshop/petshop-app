@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import React, { useState } from 'react';
 import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { globalStyles } from '@/globalStyles';
 import { styles } from './styles';
 
 export interface TableColumn {
@@ -91,7 +92,7 @@ export function EntityListTable({
                         onPress={() => onEdit(row)}
                         activeOpacity={0.7}
                       >
-                        <Ionicons name="pencil" size={18} color="#FF8C3B" />
+                        <Ionicons name="pencil" size={18} color={globalStyles.brown3} />
                       </TouchableOpacity>
                     )}
                     {onDelete && (
@@ -100,7 +101,7 @@ export function EntityListTable({
                         onPress={() => onDelete(row)}
                         activeOpacity={0.7}
                       >
-                        <Ionicons name="trash-outline" size={18} color="#FF6D00" />
+                        <Ionicons name="trash-outline" size={18} color={globalStyles.brown4} />
                       </TouchableOpacity>
                     )}
                   </View>
@@ -126,7 +127,7 @@ export function EntityListTable({
             <Ionicons
               name="chevron-back"
               size={20}
-              color={currentPage === 1 ? '#CBD2D9' : '#1F2933'}
+              color={currentPage === 1 ? globalStyles.gray3 : globalStyles.gray10}
             />
             <Text
               style={[
@@ -164,7 +165,7 @@ export function EntityListTable({
             <Ionicons
               name="chevron-forward"
               size={20}
-              color={currentPage === totalPages ? '#CBD2D9' : '#1F2933'}
+              color={currentPage === totalPages ? globalStyles.gray3 : globalStyles.gray10}
             />
           </TouchableOpacity>
         </View>
