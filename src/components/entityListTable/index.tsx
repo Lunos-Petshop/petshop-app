@@ -1,7 +1,8 @@
-import { Ionicons } from '@expo/vector-icons';
-import React, { useState } from 'react';
-import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { globalStyles } from '@/globalStyles';
+import { Feather } from '@expo/vector-icons';
+import React, { useState } from 'react';
+import { Text, TouchableOpacity, View } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 import { styles } from './styles';
 
 export interface TableColumn {
@@ -53,7 +54,11 @@ export function EntityListTable({
   return (
     <View style={styles.container}>
       {/* Table Container */}
-      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+      <ScrollView 
+        horizontal 
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{ flexGrow: 1 }}
+      >
         <View style={styles.tableContainer}>
           {/* Table Header */}
           <View style={styles.tableHeader}>
@@ -92,7 +97,7 @@ export function EntityListTable({
                         onPress={() => onEdit(row)}
                         activeOpacity={0.7}
                       >
-                        <Ionicons name="pencil" size={18} color={globalStyles.brown3} />
+                        <Feather name="edit-3" size={18} color={globalStyles.gray10} />
                       </TouchableOpacity>
                     )}
                     {onDelete && (
@@ -101,7 +106,7 @@ export function EntityListTable({
                         onPress={() => onDelete(row)}
                         activeOpacity={0.7}
                       >
-                        <Ionicons name="trash-outline" size={18} color={globalStyles.brown4} />
+                        <Feather name="trash" size={18} color={globalStyles.red5} />
                       </TouchableOpacity>
                     )}
                   </View>
@@ -124,8 +129,8 @@ export function EntityListTable({
             disabled={currentPage === 1}
             activeOpacity={0.7}
           >
-            <Ionicons
-              name="chevron-back"
+            <Feather
+              name="chevron-left"
               size={20}
               color={currentPage === 1 ? globalStyles.gray3 : globalStyles.gray10}
             />
@@ -162,8 +167,8 @@ export function EntityListTable({
             >
               Próxima
             </Text>
-            <Ionicons
-              name="chevron-forward"
+            <Feather
+              name="chevron-right"
               size={20}
               color={currentPage === totalPages ? globalStyles.gray3 : globalStyles.gray10}
             />

@@ -7,19 +7,11 @@ export const styles = StyleSheet.create({
     backgroundColor: globalStyles.gray1,
     borderRadius: 8,
     overflow: 'hidden',
-    shadowColor: globalStyles.gray10,
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 3,
+    flexDirection: 'column',
   },
 
-  // Table Container
   tableContainer: {
-    minWidth: '100%',
+    width: '100%',
   },
 
   // Table Header
@@ -60,7 +52,7 @@ export const styles = StyleSheet.create({
     backgroundColor: globalStyles.gray1,
   },
   oddRow: {
-    backgroundColor: globalStyles.white,
+    backgroundColor: globalStyles.gray2,
   },
 
   // Table Cells
@@ -99,7 +91,7 @@ export const styles = StyleSheet.create({
   paginationContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     paddingVertical: 16,
     paddingHorizontal: 20,
     backgroundColor: globalStyles.gray1,
