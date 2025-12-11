@@ -32,8 +32,8 @@ export const styles = StyleSheet.create({
     borderColor: globalStyles.brown1,
   },
   circleCurrent: {
-    backgroundColor: globalStyles.brown3,
-    borderColor: globalStyles.brown3,
+    backgroundColor: globalStyles.brown2,
+    borderColor: globalStyles.brown2,
   },
   circleUpcoming: {
     backgroundColor: globalStyles.white,
@@ -72,7 +72,7 @@ export const styles = StyleSheet.create({
     color: globalStyles.brown3,
   },
   stepLabelCurrent: {
-    color: globalStyles.brown3,
+    color: globalStyles.gray10,
   },
   stepLabelUpcoming: {
     color: globalStyles.gray5,
