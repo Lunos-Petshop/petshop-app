@@ -32,12 +32,44 @@ export function EntityListTable({
   itemsPerPage = 10,
 }: EntityListTableProps) {
   const [currentPage, setCurrentPage] = useState(1);
+  const [sortColumn, setSortColumn] = useState<string | null>(null);
+  const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
+
+  const handleSort = (columnKey: string) => {
+    if (sortColumn === columnKey) {
+      // toggle: asc -> desc -> asc
+      setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc');
+    } else {
+      setSortColumn(columnKey);
+      setSortDirection('asc'); // começa asc
+    }
+  };
+
+  const sortedData = [...data].sort((a, b) => {
+    if (!sortColumn) return 0; // sem sorting ainda
+
+    const valA = a[sortColumn];
+    const valB = b[sortColumn];
+
+    // trata valores vazios
+    if (valA == null) return 1;
+    if (valB == null) return -1;
+
+    if (typeof valA === 'number' && typeof valB === 'number') {
+      return sortDirection === 'asc' ? valA - valB : valB - valA;
+    }
+
+    // fallback string
+    return sortDirection === 'asc'
+      ? String(valA).localeCompare(String(valB))
+      : String(valB).localeCompare(String(valA));
+  });
 
   // Calculate pagination
-  const totalPages = Math.ceil(data.length / itemsPerPage);
+  const totalPages = Math.ceil(sortedData.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
-  const paginatedData = data.slice(startIndex, endIndex);
+  const paginatedData = sortedData.slice(startIndex, endIndex);
 
   const handlePreviousPage = () => {
     if (currentPage > 1) {
@@ -63,9 +95,20 @@ export function EntityListTable({
           {/* Table Header */}
           <View style={styles.tableHeader}>
             {columns.map((column) => (
-              <View key={column.key} style={styles.headerCell}>
-                <Text style={styles.headerText}>{column.label}</Text>
-              </View>
+              <TouchableOpacity 
+                key={column.key} 
+                style={styles.headerCell}
+                onPress={() => handleSort(column.key)}
+                activeOpacity={0.6}
+              >
+                <Text style={styles.headerText}>
+                  {column.label}
+
+                  {sortColumn === column.key && (
+                    sortDirection === 'asc' ? ' ▲' : ' ▼'
+                  )}
+                </Text>
+              </TouchableOpacity>
             ))}
             {(onEdit || onDelete) && (
               <View style={styles.headerCell}>
