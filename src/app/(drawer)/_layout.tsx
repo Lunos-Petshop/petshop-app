@@ -97,6 +97,16 @@ export default function DrawerLayout() {
           ),
         }}
       />
+      <Drawer.Screen
+        name="progress-test"
+        options={{
+          drawerLabel: 'Progress Bar Demo',
+          title: 'Progress Bar Demo',
+          drawerIcon: ({ color, size }) => (
+            <Ionicons name="analytics" size={size} color={color} />
+          ),
+        }}
+      />
     </Drawer>
   );
 }
