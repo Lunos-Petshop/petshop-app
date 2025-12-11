@@ -105,9 +105,9 @@ The current active step number (1-indexed). For example:
 - Connecting line in brown color
 
 ### Current Step
-- Circle filled with orange color (#FF8C3B)
+- Circle filled with orange color (#FFB074)
 - Step number displayed in white
-- Label text in orange color
+- Label text in dark gray color
 
 ### Upcoming Steps
 - Circle with gray border and white background
