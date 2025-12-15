@@ -8,7 +8,7 @@ The ContactInfoCard component provides a clean, consistent way to display contac
 
 ## Purpose
 
-The principal goal of this component is to display contact information in a visually appealing and easily scannable format. It can be used for:
+The primary goal of this component is to display contact information in a visually appealing and easily scannable format. It can be used for:
 - Business address information
 - Phone and email contact details
 - Social media links
