@@ -6,8 +6,6 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'flex-start',
     justifyContent: 'space-between',
-    paddingVertical: 20,
-    paddingHorizontal: 16,
   },
   stepContainer: {
     flex: 1,
@@ -19,6 +17,11 @@ export const styles = StyleSheet.create({
     width: '100%',
     justifyContent: 'center',
   },
+
+  stepInfoContainer: {
+    alignItems: 'center',
+  },
+
   circle: {
     width: 40,
     height: 40,
@@ -58,6 +61,8 @@ export const styles = StyleSheet.create({
     color: globalStyles.gray5,
   },
   checkIcon: {
+    position: 'relative',
+    top: 2,
     fontSize: 20,
     fontWeight: '700',
     color: globalStyles.gray10,

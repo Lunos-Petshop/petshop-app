@@ -1,6 +1,7 @@
 import { styles } from '@/components/progress-bar/styles';
+import { Feather } from '@expo/vector-icons';
 import React from 'react';
-import { View, Text } from 'react-native';
+import { Text, View } from 'react-native';
 
 export interface Step {
   label: string;
@@ -34,30 +35,46 @@ export function ProgressBar({ steps, currentStep }: ProgressBarProps) {
                 />
               )}
 
-              {/* Step circle */}
-              <View
-                style={[
-                  styles.circle,
-                  isCompleted && styles.circleCompleted,
-                  isCurrent && styles.circleCurrent,
-                  isUpcoming && styles.circleUpcoming,
-                ]}
-              >
-                {isCompleted ? (
-                  <Text style={styles.checkIcon}>✓</Text>
-                ) : (
-                  <Text
-                    style={[
-                      styles.stepNumber,
-                      isCurrent && styles.stepNumberCurrent,
-                      isUpcoming && styles.stepNumberUpcoming,
-                    ]}
-                  >
-                    {stepNumber}
-                  </Text>
-                )}
-              </View>
+              <View style={styles.stepInfoContainer}>
+                {/* Step circle */}
+                <View
+                  style={[
+                    styles.circle,
+                    isCompleted && styles.circleCompleted,
+                    isCurrent && styles.circleCurrent,
+                    isUpcoming && styles.circleUpcoming,
+                  ]}
+                >
+                  {isCompleted ? (
+                    <Text style={styles.checkIcon}>
+                        <Feather name="check" size={23}/>
+                    </Text>
+                  ) : (
+                    <Text
+                      style={[
+                        styles.stepNumber,
+                        isCurrent && styles.stepNumberCurrent,
+                        isUpcoming && styles.stepNumberUpcoming,
+                      ]}
+                    >
+                      {stepNumber}
+                    </Text>
+                  )}
+                </View>
 
+                {/* Step label */}
+                <Text
+                  style={[
+                    styles.stepLabel,
+                    isCompleted && styles.stepLabelCompleted,
+                    isCurrent && styles.stepLabelCurrent,
+                    isUpcoming && styles.stepLabelUpcoming,
+                  ]}
+                >
+                  {step.label}
+                </Text>
+              </View>
+             
               {/* Connecting line after the circle (except for the last step) */}
               {index < steps.length - 1 && (
                 <View
@@ -69,17 +86,7 @@ export function ProgressBar({ steps, currentStep }: ProgressBarProps) {
               )}
             </View>
 
-            {/* Step label */}
-            <Text
-              style={[
-                styles.stepLabel,
-                isCompleted && styles.stepLabelCompleted,
-                isCurrent && styles.stepLabelCurrent,
-                isUpcoming && styles.stepLabelUpcoming,
-              ]}
-            >
-              {step.label}
-            </Text>
+           
           </View>
         );
       })}
