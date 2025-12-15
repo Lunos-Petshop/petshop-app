@@ -9,18 +9,18 @@ import { globalStyles } from "../../globalStyles";
 
 // Mock data for pets
 const mockPets = [
-  { id: '1', name: 'Buddy', breed: 'Golden Retriever', ownerName: 'Sophia Clark', imageSource: require('../../assets/images/icon.png') },
-  { id: '2', name: 'Luna', breed: 'Siamese', ownerName: 'Liam Garcia', imageSource: require('../../assets/images/icon.png') },
-  { id: '3', name: 'Max', breed: 'German Shepherd', ownerName: 'Olivia Martinez', imageSource: require('../../assets/images/icon.png') },
-  { id: '4', name: 'Charlie', breed: 'Labrador', ownerName: 'Noah Brown', imageSource: require('../../assets/images/icon.png') },
-  { id: '5', name: 'Bella', breed: 'Persian', ownerName: 'Emma Wilson', imageSource: require('../../assets/images/icon.png') },
-  { id: '6', name: 'Rocky', breed: 'Boxer', ownerName: 'James Taylor', imageSource: require('../../assets/images/icon.png') },
-  { id: '7', name: 'Lucy', breed: 'Poodle', ownerName: 'Isabella Lee', imageSource: require('../../assets/images/icon.png') },
-  { id: '8', name: 'Milo', breed: 'Maine Coon', ownerName: 'William Harris', imageSource: require('../../assets/images/icon.png') },
-  { id: '9', name: 'Daisy', breed: 'Beagle', ownerName: 'Sophia Anderson', imageSource: require('../../assets/images/icon.png') },
-  { id: '10', name: 'Cooper', breed: 'Husky', ownerName: 'Oliver Martin', imageSource: require('../../assets/images/icon.png') },
-  { id: '11', name: 'Sadie', breed: 'Bulldog', ownerName: 'Ava Thompson', imageSource: require('../../assets/images/icon.png') },
-  { id: '12', name: 'Bailey', breed: 'Shih Tzu', ownerName: 'Ethan White', imageSource: require('../../assets/images/icon.png') },
+  { id: '1', name: 'Buddy', breed: 'Golden Retriever', ownerName: 'Sophia Clark', imageSource: require('../../../assets/images/icon.png') },
+  { id: '2', name: 'Luna', breed: 'Siamese', ownerName: 'Liam Garcia', imageSource: require('../../../assets/images/icon.png') },
+  { id: '3', name: 'Max', breed: 'German Shepherd', ownerName: 'Olivia Martinez', imageSource: require('../../../assets/images/icon.png') },
+  { id: '4', name: 'Charlie', breed: 'Labrador', ownerName: 'Noah Brown', imageSource: require('../../../assets/images/icon.png') },
+  { id: '5', name: 'Bella', breed: 'Persian', ownerName: 'Emma Wilson', imageSource: require('../../../assets/images/icon.png') },
+  { id: '6', name: 'Rocky', breed: 'Boxer', ownerName: 'James Taylor', imageSource: require('../../../assets/images/icon.png') },
+  { id: '7', name: 'Lucy', breed: 'Poodle', ownerName: 'Isabella Lee', imageSource: require('../../../assets/images/icon.png') },
+  { id: '8', name: 'Milo', breed: 'Maine Coon', ownerName: 'William Harris', imageSource: require('../../../assets/images/icon.png') },
+  { id: '9', name: 'Daisy', breed: 'Beagle', ownerName: 'Sophia Anderson', imageSource: require('../../../assets/images/icon.png') },
+  { id: '10', name: 'Cooper', breed: 'Husky', ownerName: 'Oliver Martin', imageSource: require('../../../assets/images/icon.png') },
+  { id: '11', name: 'Sadie', breed: 'Bulldog', ownerName: 'Ava Thompson', imageSource: require('../../../assets/images/icon.png') },
+  { id: '12', name: 'Bailey', breed: 'Shih Tzu', ownerName: 'Ethan White', imageSource: require('../../../assets/images/icon.png') },
 ];
 
 export default function Pets() {
