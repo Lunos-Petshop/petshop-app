@@ -83,7 +83,7 @@ export default function Pets() {
           <SearchBar 
             value={searchQuery}
             onChangeText={setSearchQuery}
-            placeholder="Search by pet name, race, or owner..."
+            placeholder="Search by pet name, breed, or owner..."
           />
         </View>
         <FilterButton onPress={handleFilter} />
